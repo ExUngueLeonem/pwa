@@ -1,25 +1,29 @@
 import { VitePWA } from 'vite-plugin-pwa';
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import mkcert from "vite-plugin-mkcert";
+import path from "path";
+import tsconfigPaths from "vite-tsconfig-paths";
 // https://vitejs.dev/config/
 export default defineConfig({
-  // server: {
-  //   https: true
-  // },
+  resolve: {
+    alias: {
+      src: path.resolve('src/'),
+    },
+  },
   plugins: [
     react(),
-    // mkcert(),
+    tsconfigPaths(),
     VitePWA({
     registerType: 'autoUpdate',
     injectRegister: false,
+
+
 
     pwaAssets: {
       disabled: false,
       config: true,
     },
-
-    manifest: {
+      manifest: {
       name: 'react-vite-pwa-sample',
       short_name: 'RVPS',
       description: 'react pregressive application template',
@@ -27,7 +31,6 @@ export default defineConfig({
 
       display: "fullscreen",
     },
-
     workbox: {
       globPatterns: ['**/*.{js,css,html,svg,png,ico}'],
       cleanupOutdatedCaches: true,
