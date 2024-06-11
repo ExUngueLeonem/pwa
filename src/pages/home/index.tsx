@@ -1,12 +1,7 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-
-import { Geolocation } from "feature/geolocation";
+import { useEffect, useState } from "react";
 import { reactLogo, viteLogo } from "shared/assets";
-import { Fluid, PWABadge } from "shared/ui";
 
 export const HomePage = () => {
-  const navigate = useNavigate();
   const [log, setLog] = useState("");
   const logText = JSON.parse(JSON.stringify(log));
 
@@ -14,6 +9,16 @@ export const HomePage = () => {
     const res = await Notification.requestPermission();
     setLog(res);
   }
+
+
+
+  useEffect(() => {
+    onNotificationHandler()
+  }, [])
+
+  useEffect(() => {
+    PushManager.name
+  }, [])
 
   const onGetNotificationHandler = () => {
     const notifTitle = "хуй";
@@ -31,17 +36,24 @@ export const HomePage = () => {
   // ServiceWorkerRegistration
 
   // navigator.serviceWorker.register()
+
   return (
     <>
       <div>
         <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="react-vite-pwa-sample logo" />
+          <img
+            style={{width: "150px"}}
+            src={viteLogo} className="logo" alt="react-vite-pwa-sample logo" />
         </a>
         <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+          <img
+            style={{width: "150px"}}
+            src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
+
       <h1>react-vite-pwa-sample</h1>
+
       <div className="card">
 
         <button onClick={onNotificationHandler}>
@@ -55,16 +67,12 @@ export const HomePage = () => {
           Получить уведомление
         </button>
 
-        <button onClick={() => navigate("/map")}>
-          карта
-        </button>
-
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      <PWABadge />
-      <Fluid />
-      <Geolocation /></>
+
+      {/*<Fluid />*/}
+    </>
   )
 }

@@ -1,10 +1,14 @@
+import { PWABadge } from "shared/ui";
+//module
 import { AppRoutes } from "./appRouter";
-import './App.css';
+//styles
+import './main.scss';
 
 function App() {
   return (
     <>
       <AppRoutes/>
+      <PWABadge />
     </>
   )
 }

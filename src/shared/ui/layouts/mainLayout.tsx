@@ -1,9 +1,18 @@
-import { Geolocation } from "../../../feature/geolocation";
+import { Outlet } from "react-router-dom";
+import { ReactNode } from "react";
+import styles from "./mainLayout.module.scss";
+interface IProps {
+  navigationPanel: ReactNode;
+}
 
-export const MainLayout = () => {
+export const MainLayout = (
+  {
+    navigationPanel,
+  }: IProps) => {
   return (
-    <>
-      <Geolocation />
-    </>
+    <div className={styles.layoutContainer}>
+      <Outlet />
+      {navigationPanel}
+    </div>
   )
 }
