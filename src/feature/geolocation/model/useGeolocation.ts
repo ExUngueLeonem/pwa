@@ -1,29 +1,25 @@
-export const Geolocation = () => {
+import { useEffect, useState } from "react";
+
+export const useGeolocation = () => {
+
+  const [position, setPosition] = useState<[number, number] | null>(null)
 
   const onLocationSuccess = async (position: GeolocationPosition) => {
     const latitude = position.coords.latitude
     const longitude = position.coords.longitude
-
-    alert(`${latitude}, ${longitude}`)
+    setPosition([latitude, longitude])
   }
 
   const onLoacationInaccessible = () => {
     console.log("проверка позиции не разрешена")
   }
 
-  const requestLocationHandler = () => {
+  useEffect(() => {
     if (!navigator.geolocation) return
     navigator.geolocation.getCurrentPosition(onLocationSuccess, onLoacationInaccessible)
+  }, [])
+
+  return {
+    position
   }
-
-  return (
-    <>
-      <button
-        onClick={requestLocationHandler}
-      >
-        getLocation
-      </button>
-    </>
-  )
-
 }
