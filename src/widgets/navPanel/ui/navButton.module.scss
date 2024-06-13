@@ -1,22 +1,21 @@
 .navButton {
-  background-color: white;
   min-width: 60px;
 
+  padding: 5px;
+
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
   border-radius: 5px;
-  border: 1px solid blue;
+  border: 1px solid rgba(105, 105, 221, 0.75);
 
+  color: inherit;
   text-decoration: none;
+  text-transform: lowercase;
+  font-family: inherit;
+  font-size: inherit;
 
-  a {
-    font-family: inherit;
-    font-size: inherit;
-  }
-
-  .active {
-
-  }
+  background-color: white;
 }
