@@ -17,8 +17,6 @@ export default defineConfig({
     registerType: 'autoUpdate',
     injectRegister: false,
 
-
-
     pwaAssets: {
       disabled: false,
       config: true,
@@ -26,8 +24,8 @@ export default defineConfig({
       manifest: {
       name: 'react-vite-pwa-sample',
       short_name: 'RVPS',
-      description: 'react pregressive application template',
-      theme_color: '#ffffff',
+      description: 'react progressive application template',
+      theme_color: '#414157',
 
       display: "fullscreen",
     },
