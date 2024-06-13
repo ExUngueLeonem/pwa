@@ -1,8 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import { MainLayout } from "shared/ui";
+import { NavPanel } from "widgets/navPanel";
 import { HomePage } from "pages/home";
 import { MapPage } from "pages/map";
-import { MainLayout } from "../shared/ui";
-import { NavPanel } from "../widgets/navPanel";
+import { CameraPage } from "pages/camera";
 
 export const AppRoutes = () => {
   return (
@@ -11,6 +13,7 @@ export const AppRoutes = () => {
         <Route path={"/"} element={<MainLayout navigationPanel={<NavPanel />} />}>
           <Route index element={<HomePage />} />
           <Route path={"/map"} element={<MapPage />} />
+          <Route path={"/camera"} element={<CameraPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

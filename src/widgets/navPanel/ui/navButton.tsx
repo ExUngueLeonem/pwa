@@ -17,7 +17,7 @@ export const NavButton = (
 ) => {
   return (
     <NavLink className={styles.navButton} to={path}>
-      <div>
+      <div className={styles.icon_container}>
         {icon}
       </div>
       <div>

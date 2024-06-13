@@ -9,7 +9,9 @@ export const BackButton = () => {
   const goBack = () => navigate(-1)
   return (
     <button className={styles.navButton} onClick={goBack}>
-      <FaAngleLeft />
+      <div className={styles.icon_container}>
+        <FaAngleLeft />
+      </div>
     </button>
   )
 }
