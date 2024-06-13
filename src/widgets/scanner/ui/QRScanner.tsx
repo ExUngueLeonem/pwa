@@ -6,7 +6,6 @@ import styles from "./QRScanner.module.scss";
 
 const ScannerStyles: IScannerStyles = {
   container: {
-    backgroundColor: "aquamarine",
     height: "100vmin",
     width: "100vmin",
   },

@@ -1,4 +1,4 @@
-import { FaCamera, FaHome, FaMapMarkedAlt } from "react-icons/fa";
+import { FaCamera, FaHome, FaMapMarkedAlt, FaQrcode } from "react-icons/fa";
 
 //module
 import { NavButton } from "./navButton";
@@ -14,7 +14,7 @@ export const NavPanel = () => {
         <NavButton path={"/"} label={""} icon={<FaHome />}/>
         <NavButton path={"/map"} label={""} icon={<FaMapMarkedAlt />}/>
         <NavButton path={"/camera"} label={""} icon={<FaCamera />}/>
-        <NavButton path={"/qr_scanner"} label={""} icon={<FaCamera />}/>
+        <NavButton path={"/qr_scanner"} label={""} icon={<FaQrcode />}/>
       </div>
     </>
   )
