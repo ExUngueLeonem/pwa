@@ -5,6 +5,7 @@ import { NavPanel } from "widgets/navPanel";
 import { HomePage } from "pages/home";
 import { MapPage } from "pages/map";
 import { CameraPage } from "pages/camera";
+import { QRScannerPage } from "pages/qr_scanner";
 
 export const AppRoutes = () => {
   return (
@@ -14,6 +15,7 @@ export const AppRoutes = () => {
           <Route index element={<HomePage />} />
           <Route path={"/map"} element={<MapPage />} />
           <Route path={"/camera"} element={<CameraPage />} />
+          <Route path={"/qr_scanner"} element={<QRScannerPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

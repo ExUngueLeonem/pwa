@@ -11,10 +11,10 @@ export const NavPanel = () => {
     <>
       <div className={styles.navContainer}>
         {/*<BackButton/>*/}
-        <NavButton path={"/"} label={"Главная"} icon={<FaHome />}/>
-        <NavButton path={"/map"} label={"Карта"} icon={<FaMapMarkedAlt />}/>
-        <NavButton path={"/camera"} label={"Камера"} icon={<FaCamera />}/>
-        <NavButton path={"/map"} label={"Карта"}/>
+        <NavButton path={"/"} label={""} icon={<FaHome />}/>
+        <NavButton path={"/map"} label={""} icon={<FaMapMarkedAlt />}/>
+        <NavButton path={"/camera"} label={""} icon={<FaCamera />}/>
+        <NavButton path={"/qr_scanner"} label={""} icon={<FaCamera />}/>
       </div>
     </>
   )
