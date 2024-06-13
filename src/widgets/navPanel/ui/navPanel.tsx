@@ -1,4 +1,4 @@
-import { FaCamera, FaMapMarkedAlt } from "react-icons/fa";
+import { FaCamera, FaHome, FaMapMarkedAlt } from "react-icons/fa";
 
 //module
 import { NavButton } from "./navButton";
@@ -11,7 +11,7 @@ export const NavPanel = () => {
     <>
       <div className={styles.navContainer}>
         {/*<BackButton/>*/}
-        <NavButton path={"/"} label={"Главная"} icon={<FaMapMarkedAlt />}/>
+        <NavButton path={"/"} label={"Главная"} icon={<FaHome />}/>
         <NavButton path={"/map"} label={"Карта"} icon={<FaMapMarkedAlt />}/>
         <NavButton path={"/camera"} label={"Камера"} icon={<FaCamera />}/>
         <NavButton path={"/map"} label={"Карта"}/>
