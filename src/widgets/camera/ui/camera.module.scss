@@ -1,0 +1,13 @@
+.camera_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: cadetblue;
+  height: 100%;
+  width: 100%;
+
+  video {
+    transform: scaleX(-1);
+  }
+}

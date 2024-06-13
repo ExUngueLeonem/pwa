@@ -1,7 +1,9 @@
+import { Camera } from "widgets/camera";
+
 export const CameraPage = () => {
   return (
-    <div>
-      CameraPage
-    </div>
+    <>
+      <Camera/>
+    </>
   )
 }
