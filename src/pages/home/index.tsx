@@ -10,8 +10,6 @@ export const HomePage = () => {
     setLog(res);
   }
 
-
-
   useEffect(() => {
     onNotificationHandler()
   }, [])
@@ -27,27 +25,19 @@ export const HomePage = () => {
       body: notifBody,
     };
     new Notification(notifTitle, options);
-    // setTimeout(onGetNotificationHandler, 1000);
   }
-
-  // PushManager
-  // console.log(new PushSubscription())
-
-  // ServiceWorkerRegistration
-
-  // navigator.serviceWorker.register()
 
   return (
     <>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img
-            style={{width: "150px"}}
+            style={{ width: "150px" }}
             src={viteLogo} className="logo" alt="react-vite-pwa-sample logo" />
         </a>
         <a href="https://react.dev" target="_blank">
           <img
-            style={{width: "150px"}}
+            style={{ width: "150px" }}
             src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
@@ -69,7 +59,7 @@ export const HomePage = () => {
 
       </div>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        {}
       </p>
 
       {/*<Fluid />*/}
